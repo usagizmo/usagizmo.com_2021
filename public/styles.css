@@ -106,19 +106,22 @@ Components
 .c-subtitle {
   font-size: 1.5em;
   font-weight: bold;
-  margin-top: 28px;
+  margin-top: 40px;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
 }
 @media screen and (min-width: 768px) {
   .c-subtitle {
-    margin-top: 56px;
+    margin-top: 72px;
   }
 }
 
 .c-sub2title {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: bold;
-  margin-top: 20px;
+  margin-top: 24px;
   margin-bottom: 0.5em;
+  line-height: 1.2;
 }
 @media screen and (min-width: 768px) {
   .c-sub2title {
