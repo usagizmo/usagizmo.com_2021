@@ -9,7 +9,7 @@ body {
   overflow-x: hidden;
   font-family: Futura, -apple-system, BlinkMacSystemFont, Roboto, 'Segoe UI', 'Helvetica Neue',
     HelveticaNeue, YuGothic, 'Yu Gothic Medium', 'Yu Gothic', Verdana, Meiryo, sans-serif;
-  color: #222;
+  color: #333;
 }
 
 /* Optional */
@@ -182,11 +182,15 @@ Utilities
 .u-text-link {
   position: relative;
   display: inline-flex;
-  color: #999;
   overflow: hidden;
-  transition: 0.2s;
+  transition: 0.1s;
+  color: #666;
 }
-.u-text-link::after {
+.u-text-link.\--line {
+  transition: 0.2s;
+  color: #999;
+}
+.u-text-link.\--line::after {
   position: absolute;
   content: '';
   left: 0;
@@ -200,7 +204,6 @@ Utilities
 .u-text-link:hover {
   color: #000;
 }
-
-.u-text-link:hover::after {
+.u-text-link.\--line:hover::after {
   transform: translateX(0%);
 }
