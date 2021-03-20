@@ -1,32 +1,36 @@
 /* ────────────────────
 Base
 ──────────────────── */
+:root {
+  --color-background: #fdfdfd;
+  --color-divider: #ddd;
+  --color-text-hard: #000;
+  --color-text: #333;
+  --color-text-link-main: #999;
+  --color-text-link-sub: #555;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-divider: #4d4d4d;
+    --color-background: #333;
+    --color-text-hard: #fff;
+    --color-text: #eee;
+    --color-text-link-main: #999;
+    --color-text-link-sub: #bfbfbf;
+  }
+}
+
 html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  height: 100%;
 }
 
 body {
   overflow-x: hidden;
   font-family: futura-pt, YuGothic, 'Yu Gothic Medium', 'Yu Gothic', Verdana, Meiryo, sans-serif;
-  color: #333;
-}
-
-/* Optional */
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-  /* Edge */
-  color: #a0aec0;
-}
-
-input:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: #a0aec0;
-}
-
-input::placeholder,
-textarea::placeholder {
-  color: #a0aec0;
+  height: 100%;
+  color: var(--color-text);
+  background-color: var(--color-background);
 }
 
 /* ────────────────────
@@ -137,13 +141,15 @@ Components
   font-size: 14px;
 }
 .c-inline-list li {
+  display: flex;
 }
 .c-inline-list li:not(:last-child) {
 }
 .c-inline-list li:not(:last-child)::after {
   content: '/';
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+  padding-right: 4px;
+  padding-left: 4px;
+  color: var(--color-divider);
 }
 @media screen and (min-width: 768px) {
   .c-inline-list {
@@ -178,16 +184,23 @@ Utilities
   }
 }
 
+.u-property {
+  position: relative;
+}
+.u-property::after {
+  content: ':';
+  margin-right: 8px;
+}
+
 .u-text-link {
   position: relative;
   display: inline-flex;
   overflow: hidden;
-  transition: 0.1s;
-  color: #666;
+  color: var(--color-text-link-sub);
 }
 .u-text-link.\--line {
   transition: 0.2s;
-  color: #999;
+  color: var(--color-text-link-main);
 }
 .u-text-link.\--line::after {
   position: absolute;
@@ -196,12 +209,12 @@ Utilities
   bottom: 0;
   width: 100%;
   height: 1px;
-  background-color: #000;
+  background-color: var(--color-text-hard);
   transform: translateX(-100%);
   transition: 0.2s;
 }
 .u-text-link:hover {
-  color: #000;
+  color: var(--color-text-hard);
 }
 .u-text-link.\--line:hover::after {
   transform: translateX(0%);
