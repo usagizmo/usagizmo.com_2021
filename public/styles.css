@@ -192,7 +192,7 @@ Utilities
 .u-text-link.\--line::after {
   position: absolute;
   content: '';
-  left: 0;
+  left: -1px;
   bottom: 0;
   width: 100%;
   height: 1px;
