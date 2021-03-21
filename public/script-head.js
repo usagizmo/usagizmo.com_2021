@@ -4,9 +4,13 @@
   'use strict'
 
   const setInitialTheme = function () {
+    const booleanToTheme = function (checked) {
+      return checked ? 'dark' : 'light'
+    }
+
     const getTheme = function () {
       const mql = matchMedia('(prefers-color-scheme: dark)')
-      return localStorage.getItem('theme') || (mql.matches ? 'dark' : 'light')
+      return localStorage.getItem('theme') || booleanToTheme(mql.matches)
     }
 
     const setTheme = function (theme) {
