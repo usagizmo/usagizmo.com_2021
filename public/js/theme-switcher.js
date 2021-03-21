@@ -1,5 +1,3 @@
-// Processing without getting the DOM
-
 ;(function () {
   'use strict'
 
