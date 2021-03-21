@@ -1,7 +1,7 @@
 {
-  "name": "usagizmo.com_2021",
+  "name": "usagizmo.com",
   "version": "1.0.0",
-  "repository": "ssh://git@github.com/usagizmo/usagizmo.com_2021.git",
+  "repository": "ssh://git@github.com/usagizmo/usagizmo.com.git",
   "author": "usagizmo <usagizmo@gmail.com>",
   "license": "MIT",
   "scripts": {
