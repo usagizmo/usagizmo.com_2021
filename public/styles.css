@@ -2,8 +2,8 @@
 Base
 ──────────────────── */
 :root {
-  --color-background: #fdfdfd;
-  --color-divider: #ddd;
+  --color-background: #fcfcfc;
+  --color-divider: #d9d9d9;
   --color-text-hard: #000;
   --color-text: #333;
   --color-text-link-main: #999;
@@ -12,9 +12,9 @@ Base
 @media (prefers-color-scheme: dark) {
   :root {
     --color-divider: #4d4d4d;
-    --color-background: #333;
+    --color-background: #262626;
     --color-text-hard: #fff;
-    --color-text: #eee;
+    --color-text: #eaeaea;
     --color-text-link-main: #999;
     --color-text-link-sub: #bfbfbf;
   }
