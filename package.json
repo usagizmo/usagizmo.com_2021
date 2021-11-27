@@ -1,7 +1,9 @@
 {
-  "name": "nextjs-template",
-  "version": "0.7.0",
-  "private": true,
+  "name": "usagizmo.com",
+  "version": "1.0.0",
+  "repository": "ssh://git@github.com/usagizmo/usagizmo.com.git",
+  "author": "usagizmo <usagizmo@gmail.com>",
+  "license": "MIT",
   "scripts": {
     "prepare": "husky install",
     "dev": "next dev",
