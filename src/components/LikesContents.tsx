@@ -262,6 +262,14 @@ const sections: Section[] = [
         text: 'ESLint',
       },
       {
+        href: 'https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory',
+        text: 'Git History',
+      },
+      {
+        href: 'https://marketplace.visualstudio.com/items?itemName=letmaik.git-tree-compare',
+        text: 'Git Tree Compare',
+      },
+      {
         href: 'https://marketplace.visualstudio.com/items?itemName=GitHub.copilot',
         text: 'GitHub CopilotPreview',
       },
