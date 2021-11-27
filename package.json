@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build:graphql": "pnpm generate",
     "build:next": "next build",
-    "build": "pnpm build:graphql && pnpm build:next",
+    "build": "pnpm build:next",
     "start": "next start",
     "lint": "next lint --dir src",
     "format": "prettier --write ."
