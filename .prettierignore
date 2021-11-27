@@ -1,2 +1,5 @@
-/**/*.min.*
-/public/libs
+/.next
+/out
+/public
+/firebase/functions/lib
+pnpm-lock.yaml
