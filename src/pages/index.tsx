@@ -92,6 +92,19 @@ const HomePage: VFC<Props> = () => {
                     <strong className="u-property">
                       <a
                         className="u-text-link --line"
+                        href="https://custimer.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Custimier
+                      </a>
+                    </strong>
+                    Customize+Timer/締め切りを何度でも
+                  </li>
+                  <li>
+                    <strong className="u-property">
+                      <a
+                        className="u-text-link --line"
                         href="https://tomatimer.com/"
                         target="_blank"
                         rel="noopener noreferrer"
