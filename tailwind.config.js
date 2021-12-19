@@ -1,14 +1,9 @@
 module.exports = {
-  mode: 'jit',
-  purge: ['./src/pages/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  content: ['./src/pages/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     fontFamily: {
-      sans: `futura-pt, YuGothic, 'Yu Gothic Medium', 'Yu Gothic', Verdana, Meiryo, sans-serif`,
+      sans: ['Jost', 'yakuhanjp_Noto', 'Noto Sans CJK JP', 'Noto Sans JP', 'sans-serif'],
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
 }
