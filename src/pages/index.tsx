@@ -66,19 +66,6 @@ const HomePage: VFC<Props> = () => {
                     <strong className="u-property">
                       <a
                         className="u-text-link --line"
-                        href="https://github.com/usagizmo/static-site-template"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        static-site-template
-                      </a>
-                    </strong>
-                    静的サイトを作るとき
-                  </li>
-                  <li>
-                    <strong className="u-property">
-                      <a
-                        className="u-text-link --line"
                         href="https://github.com/usagizmo/nextjs-template"
                         target="_blank"
                         rel="noopener noreferrer"

@@ -45,10 +45,6 @@ const sections: Section[] = [
         href: 'https://aftershokz.jp/products/bone-conduction-headphone-opencomm',
         text: 'OpenComm AfterShokz',
       },
-      {
-        href: 'https://www.asus.com/jp/Networking-IoT-Servers/WiFi-Routers/ASUS-Gaming-Routers/RT-AX82U/',
-        text: 'ASUS RT-AX82U',
-      },
     ],
   },
   {
