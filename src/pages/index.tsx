@@ -2,10 +2,60 @@ import React, { VFC } from 'react'
 import Layout from '../components/Layout'
 import ThemeSwitcher from '../components/ThemeSwitcher'
 import LikesContents from '../components/LikesContents'
+import { InferGetStaticPropsType } from 'next'
 
-interface Props {}
+type Props = InferGetStaticPropsType<typeof getStaticProps>
 
-const HomePage: VFC<Props> = () => {
+type LikeItem = {
+  id: string
+  name: string
+  url: string | null
+}
+
+type LikeSection = {
+  id: string
+  name: string
+  url: string | null
+  order: number | null
+  like_items: LikeItem[]
+}
+
+export async function getStaticProps() {
+  const query = `
+    query LikeSections {
+      like_sections(order_by: {order: asc}) {
+        id
+        name
+        url
+        order
+        like_items(order_by: {name: asc}) {
+          id
+          name
+          url
+        }
+      }
+    }
+  `
+
+  const res = await fetch(process.env.GRAPHQL_ENDPOINT ?? '', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/graphql',
+      'x-hasura-admin-secret': process.env.HASURA_ADMIN_SECRET ?? '',
+    },
+    body: JSON.stringify({ query }),
+  })
+  const likeSections = (await res.json()).data.like_sections as LikeSection[]
+
+  return {
+    props: {
+      likeSections,
+    },
+  }
+}
+
+const HomePage: VFC<Props> = ({ likeSections }) => {
+  console.log(likeSections)
   return (
     <Layout>
       <div className="c-wrapper">
@@ -154,7 +204,7 @@ const HomePage: VFC<Props> = () => {
               </section>
               <section>
                 <h2 className="c-subtitle">Likes</h2>
-                <LikesContents />
+                <LikesContents likeSections={likeSections} />
               </section>
               <ThemeSwitcher />
             </div>
