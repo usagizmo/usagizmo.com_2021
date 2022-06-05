@@ -50,6 +50,7 @@ export async function getStaticProps() {
   return {
     props: {
       likeSections,
+      revalidate: 60,
     },
   }
 }
