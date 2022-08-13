@@ -71,11 +71,11 @@ const HomePage: VFC<Props> = ({ likeSections }) => {
                   <li>
                     <a
                       className="u-text-link"
-                      href="https://nextjs.org/"
+                      href="https://ja.reactjs.org/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Next.js
+                      React
                     </a>
                   </li>
                   <li>
